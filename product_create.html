@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type = 'submit' value = 'save' >
+{% endblock %}
+{% block content_1 %}
+    <h5>this is cool</h5>>
+    {% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>About page</h1>
+<p>This is my about page</p>
+{{ my_text }},{{ my_num }}
+{% endblock %}
+{% block content_1 %}
+<p>this is second one</p>
+<ol>
+    <li>dum_1</li>
+    <li>dum_2</li>
+</ol>
+<ul>
+{% for i in my_list %}
+{% if i == 456 %}
+    <li>{{ i|add:3 }}</li>
+    {% else %}
+    <li>{{ i }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+{% endblock %}
